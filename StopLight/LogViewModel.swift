@@ -22,6 +22,7 @@ class LogViewModel: TimerViewModel {
     // records.
     private func sinkResets() {
         timer.getResetPublisher().sink { record in
+            self.secondCount = 0
             self.records.append(record)
         }.store(in: &subscriptions)
     }
@@ -31,8 +32,10 @@ class LogViewModel: TimerViewModel {
     private func sinkSeconds() {
         timer.publisher.sink { _ in
             self.secondCount += 1
+            print(self.secondCount)
             if let color = StopLightColor.getColor(from: self.secondCount) {
                 self.records.append(StopLightRecord(.changed(color)))
+                print("Current second: \(self.secondCount), color: \(color)")
             }
         }.store(in: &subscriptions)
     }

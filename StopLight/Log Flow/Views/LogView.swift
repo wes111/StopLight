@@ -16,6 +16,7 @@ struct LogView: View {
             ForEach(vm.records) { record in
                 RecordView(record: record)
             }
+            .padding(10)
         }
         .padding(30)
     }
@@ -23,7 +24,6 @@ struct LogView: View {
 
 struct LogView_Previews: PreviewProvider {
     static var previews: some View {
-        //LogView()
-        EmptyView()
+        LogView(vm: LogViewModel(SecondTimer()))
     }
 }
