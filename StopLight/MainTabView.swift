@@ -9,16 +9,17 @@ import SwiftUI
 
 struct MainTabView: View {
     
-    @StateObject var vm = StopLightViewModel()
+    // A shared timer.
+    let timer = SecondTimer()
     
     var body: some View {
         TabView {
-            StopLightView(vm: vm)
+            StopLightView(vm: StopLightViewModel(timer))
                 .tabItem {
                     Label("Stop Light", systemImage: "car.2.fill")
                 }
             
-            LogView(vm: vm)
+            LogView(vm: LogViewModel(timer))
                 .tabItem {
                     Label("Log", systemImage: "pencil")
                 }

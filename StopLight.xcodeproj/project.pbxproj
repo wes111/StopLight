@@ -18,6 +18,10 @@
 		EE75C7A528B85B9300D83FBE /* StopLightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7A428B85B9300D83FBE /* StopLightViewModel.swift */; };
 		EE75C7A828B9115300D83FBE /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7A728B9115200D83FBE /* RecordView.swift */; };
 		EE75C7AA28B9163A00D83FBE /* StopLightRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7A928B9163A00D83FBE /* StopLightRecord.swift */; };
+		EE75C7AC28B969D800D83FBE /* StopLightUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7AB28B969D800D83FBE /* StopLightUpdate.swift */; };
+		EE75C7AE28B96C8700D83FBE /* SecondTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7AD28B96C8700D83FBE /* SecondTimer.swift */; };
+		EE75C7B028B972D900D83FBE /* LogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7AF28B972D900D83FBE /* LogViewModel.swift */; };
+		EE75C7B228B97A3100D83FBE /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7B128B97A3100D83FBE /* TimerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		EE75C7A428B85B9300D83FBE /* StopLightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLightViewModel.swift; sourceTree = "<group>"; };
 		EE75C7A728B9115200D83FBE /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		EE75C7A928B9163A00D83FBE /* StopLightRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLightRecord.swift; sourceTree = "<group>"; };
+		EE75C7AB28B969D800D83FBE /* StopLightUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLightUpdate.swift; sourceTree = "<group>"; };
+		EE75C7AD28B96C8700D83FBE /* SecondTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTimer.swift; sourceTree = "<group>"; };
+		EE75C7AF28B972D900D83FBE /* LogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewModel.swift; sourceTree = "<group>"; };
+		EE75C7B128B97A3100D83FBE /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +73,11 @@
 		EE75C78928B82D5D00D83FBE /* StopLight */ = {
 			isa = PBXGroup;
 			children = (
-				EE75C79828B8317700D83FBE /* Models */,
-				EE75C79B28B832BA00D83FBE /* Views */,
-				EE75C7A628B85BA100D83FBE /* View Model */,
+				EE75C79E28B8396A00D83FBE /* MainTabView.swift */,
+				EE75C7AD28B96C8700D83FBE /* SecondTimer.swift */,
+				EE75C7B128B97A3100D83FBE /* TimerViewModel.swift */,
+				EE75C7B328B97B7800D83FBE /* StopLight Flow */,
+				EE75C7B728B97BEF00D83FBE /* Log Flow */,
 				EE75C78A28B82D5D00D83FBE /* StopLightApp.swift */,
 				EE75C78C28B82D5D00D83FBE /* ContentView.swift */,
 				EE75C78E28B82D6200D83FBE /* Assets.xcassets */,
@@ -87,8 +97,6 @@
 		EE75C79828B8317700D83FBE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EE75C79928B8319800D83FBE /* StopLightColor.swift */,
-				EE75C7A928B9163A00D83FBE /* StopLightRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -96,8 +104,6 @@
 		EE75C79B28B832BA00D83FBE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EE75C79E28B8396A00D83FBE /* MainTabView.swift */,
-				EE75C79C28B832D400D83FBE /* StopLightView.swift */,
 				EE75C7A028B839BD00D83FBE /* LogView.swift */,
 				EE75C7A728B9115200D83FBE /* RecordView.swift */,
 			);
@@ -107,9 +113,56 @@
 		EE75C7A628B85BA100D83FBE /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				EE75C7A428B85B9300D83FBE /* StopLightViewModel.swift */,
+				EE75C7AF28B972D900D83FBE /* LogViewModel.swift */,
 			);
 			name = "View Model";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		EE75C7B328B97B7800D83FBE /* StopLight Flow */ = {
+			isa = PBXGroup;
+			children = (
+				EE75C7B628B97BB600D83FBE /* Model */,
+				EE75C7B528B97B9C00D83FBE /* Views */,
+				EE75C7B428B97B8400D83FBE /* View Model */,
+			);
+			path = "StopLight Flow";
+			sourceTree = "<group>";
+		};
+		EE75C7B428B97B8400D83FBE /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE75C7A428B85B9300D83FBE /* StopLightViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		EE75C7B528B97B9C00D83FBE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE75C79C28B832D400D83FBE /* StopLightView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE75C7B628B97BB600D83FBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE75C79928B8319800D83FBE /* StopLightColor.swift */,
+				EE75C7A928B9163A00D83FBE /* StopLightRecord.swift */,
+				EE75C7AB28B969D800D83FBE /* StopLightUpdate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE75C7B728B97BEF00D83FBE /* Log Flow */ = {
+			isa = PBXGroup;
+			children = (
+				EE75C79828B8317700D83FBE /* Models */,
+				EE75C79B28B832BA00D83FBE /* Views */,
+				EE75C7A628B85BA100D83FBE /* View Model */,
+			);
+			path = "Log Flow";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,12 +236,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE75C79A28B8319800D83FBE /* StopLightColor.swift in Sources */,
+				EE75C7AC28B969D800D83FBE /* StopLightUpdate.swift in Sources */,
 				EE75C7A128B839BD00D83FBE /* LogView.swift in Sources */,
+				EE75C7B228B97A3100D83FBE /* TimerViewModel.swift in Sources */,
 				EE75C78D28B82D5D00D83FBE /* ContentView.swift in Sources */,
 				EE75C78B28B82D5D00D83FBE /* StopLightApp.swift in Sources */,
 				EE75C7A528B85B9300D83FBE /* StopLightViewModel.swift in Sources */,
 				EE75C7A828B9115300D83FBE /* RecordView.swift in Sources */,
+				EE75C7B028B972D900D83FBE /* LogViewModel.swift in Sources */,
 				EE75C79D28B832D400D83FBE /* StopLightView.swift in Sources */,
+				EE75C7AE28B96C8700D83FBE /* SecondTimer.swift in Sources */,
 				EE75C7AA28B9163A00D83FBE /* StopLightRecord.swift in Sources */,
 				EE75C79F28B8396B00D83FBE /* MainTabView.swift in Sources */,
 			);

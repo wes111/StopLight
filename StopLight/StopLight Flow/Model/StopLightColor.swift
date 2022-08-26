@@ -26,6 +26,7 @@ enum StopLightColor: String {
         return green.duration + yellow.duration + red.duration
     }
     
+    // Get the stoplight's current color from seconds in the cycle.
     static func getColor(from secondCount: Int) -> Self? {
         if secondCount == 0 {
             return .green

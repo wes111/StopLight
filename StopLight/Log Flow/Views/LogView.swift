@@ -9,14 +9,15 @@ import SwiftUI
 
 struct LogView: View {
     
-    @ObservedObject var vm: StopLightViewModel
+    @ObservedObject var vm: LogViewModel
     
     var body: some View {
-        VStack {
-            ForEach(vm.record) { record in
+        ScrollView {
+            ForEach(vm.records) { record in
                 RecordView(record: record)
             }
         }
+        .padding(30)
     }
 }
 

@@ -40,6 +40,6 @@ struct StopLightView: View {
 
 struct StopLightView_Previews: PreviewProvider {
     static var previews: some View {
-        StopLightView(vm: StopLightViewModel())
+        StopLightView(vm: StopLightViewModel(SecondTimer()))
     }
 }
