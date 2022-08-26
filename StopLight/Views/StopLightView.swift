@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct StopLightView: View {
-    
-    @Binding var currentColor: StopLightColor
+    @StateObject var vm = StopLightViewModel()
     
     var body: some View {
         VStack(spacing: 50) {
             VStack(spacing: 10) {
                 Image(systemName: "circle.fill")
-                    .foregroundColor(currentColor == .red ? .red : .black)
+                    .foregroundColor(vm.currentColor == .red ? .red : .black)
                 
                 Image(systemName: "circle.fill")
-                    .foregroundColor(currentColor == .yellow ? .yellow : .black)
+                    .foregroundColor(vm.currentColor == .yellow ? .yellow : .black)
                 
                 Image(systemName: "circle.fill")
-                    .foregroundColor(currentColor == .green ? .green : .black)
+                    .foregroundColor(vm.currentColor == .green ? .green : .black)
             }
             .font(.system(size: 100))
             .padding(20)
@@ -41,8 +40,6 @@ struct StopLightView: View {
 
 struct StopLightView_Previews: PreviewProvider {
     static var previews: some View {
-        StopLightView(
-            currentColor: .constant(StopLightColor.yellow)
-        )
+        StopLightView()
     }
 }

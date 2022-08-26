@@ -9,11 +9,9 @@ import SwiftUI
 
 struct MainTabView: View {
     
-    @State var color = StopLightColor.green
-    
     var body: some View {
         TabView {
-            StopLightView(currentColor: $color)
+            StopLightView()
                 .tabItem {
                     Label("Stop Light", systemImage: "car.2.fill")
                 }
