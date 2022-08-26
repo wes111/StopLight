@@ -9,14 +9,16 @@ import SwiftUI
 
 struct MainTabView: View {
     
+    @StateObject var vm = StopLightViewModel()
+    
     var body: some View {
         TabView {
-            StopLightView()
+            StopLightView(vm: vm)
                 .tabItem {
                     Label("Stop Light", systemImage: "car.2.fill")
                 }
             
-            LogView()
+            LogView(vm: vm)
                 .tabItem {
                     Label("Log", systemImage: "pencil")
                 }

@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-enum StopLightColor {
-    case green
-    case yellow
-    case red
+enum StopLightColor: String {
+    case green = "Green"
+    case yellow = "Yellow"
+    case red = "Red"
     
     // The duration in seconds.
     var duration: Int {

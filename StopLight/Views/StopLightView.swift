@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StopLightView: View {
-    @StateObject var vm = StopLightViewModel()
+    @ObservedObject var vm: StopLightViewModel
     
     var body: some View {
         VStack(spacing: 50) {
@@ -40,6 +40,6 @@ struct StopLightView: View {
 
 struct StopLightView_Previews: PreviewProvider {
     static var previews: some View {
-        StopLightView()
+        StopLightView(vm: StopLightViewModel())
     }
 }

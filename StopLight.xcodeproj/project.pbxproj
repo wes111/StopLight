@@ -16,6 +16,8 @@
 		EE75C79F28B8396B00D83FBE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C79E28B8396A00D83FBE /* MainTabView.swift */; };
 		EE75C7A128B839BD00D83FBE /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7A028B839BD00D83FBE /* LogView.swift */; };
 		EE75C7A528B85B9300D83FBE /* StopLightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7A428B85B9300D83FBE /* StopLightViewModel.swift */; };
+		EE75C7A828B9115300D83FBE /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7A728B9115200D83FBE /* RecordView.swift */; };
+		EE75C7AA28B9163A00D83FBE /* StopLightRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7A928B9163A00D83FBE /* StopLightRecord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		EE75C79E28B8396A00D83FBE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		EE75C7A028B839BD00D83FBE /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
 		EE75C7A428B85B9300D83FBE /* StopLightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLightViewModel.swift; sourceTree = "<group>"; };
+		EE75C7A728B9115200D83FBE /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		EE75C7A928B9163A00D83FBE /* StopLightRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLightRecord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				EE75C79928B8319800D83FBE /* StopLightColor.swift */,
+				EE75C7A928B9163A00D83FBE /* StopLightRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,9 +96,10 @@
 		EE75C79B28B832BA00D83FBE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EE75C79C28B832D400D83FBE /* StopLightView.swift */,
 				EE75C79E28B8396A00D83FBE /* MainTabView.swift */,
+				EE75C79C28B832D400D83FBE /* StopLightView.swift */,
 				EE75C7A028B839BD00D83FBE /* LogView.swift */,
+				EE75C7A728B9115200D83FBE /* RecordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,7 +187,9 @@
 				EE75C78D28B82D5D00D83FBE /* ContentView.swift in Sources */,
 				EE75C78B28B82D5D00D83FBE /* StopLightApp.swift in Sources */,
 				EE75C7A528B85B9300D83FBE /* StopLightViewModel.swift in Sources */,
+				EE75C7A828B9115300D83FBE /* RecordView.swift in Sources */,
 				EE75C79D28B832D400D83FBE /* StopLightView.swift in Sources */,
+				EE75C7AA28B9163A00D83FBE /* StopLightRecord.swift in Sources */,
 				EE75C79F28B8396B00D83FBE /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
