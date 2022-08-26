@@ -6,35 +6,43 @@
 //
 
 import Combine
+import Foundation
 
 class StopLightViewModel: ObservableObject {
     
     @Published var currentColor: StopLightColor = .green
-    let model = StopLightModel()
+    
+    private var secondTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    private var secondCount = 0 {
+        // Reset to 0 when a cycle completes. No need to continue
+        // counting up.
+        didSet {
+            if secondCount == StopLightColor.cycleDuration {
+                secondCount = 0
+            }
+        }
+    }
     private var subscriptions = Set<AnyCancellable>()
     
     init() {
-        sinkTimers()
-        resetStopLight()
+        sinkColors()
+    }
+
+    func sinkColors() {
+        secondTimer.sink { _ in
+            self.secondCount += 1
+            print(self.secondCount)
+            if let color = StopLightColor.getColor(from: self.secondCount) {
+                self.currentColor = color
+                print("Current second: \(self.secondCount), color: \(color)")
+            }
+        }.store(in: &subscriptions)
     }
     
-    func resetStopLight() {
+    func reset() {
+        secondCount = 0
         currentColor = .green
-        model.stopTimers()
-        model.startTimers()
-    }
-    
-    private func sinkTimers() {
-        model.greenTimer.sink { date in
-            self.currentColor = .green
-        }.store(in: &subscriptions)
-        
-        model.yellowTimer.sink { date in
-            self.currentColor = .yellow
-        }.store(in: &subscriptions)
-        
-        model.redTimer.sink { date in
-            self.currentColor = .red
-        }.store(in: &subscriptions)
+        secondTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     }
 }

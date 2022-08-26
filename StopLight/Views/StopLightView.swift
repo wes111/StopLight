@@ -27,7 +27,7 @@ struct StopLightView: View {
             .border(.black, width: 10)
             
             Button {
-                
+                vm.reset()
             } label: {
                 Text("Restart")
                     .font(.system(size: 40))

@@ -15,7 +15,6 @@
 		EE75C79D28B832D400D83FBE /* StopLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C79C28B832D400D83FBE /* StopLightView.swift */; };
 		EE75C79F28B8396B00D83FBE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C79E28B8396A00D83FBE /* MainTabView.swift */; };
 		EE75C7A128B839BD00D83FBE /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7A028B839BD00D83FBE /* LogView.swift */; };
-		EE75C7A328B83EBB00D83FBE /* StopLightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7A228B83EBB00D83FBE /* StopLightModel.swift */; };
 		EE75C7A528B85B9300D83FBE /* StopLightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7A428B85B9300D83FBE /* StopLightViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +28,6 @@
 		EE75C79C28B832D400D83FBE /* StopLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLightView.swift; sourceTree = "<group>"; };
 		EE75C79E28B8396A00D83FBE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		EE75C7A028B839BD00D83FBE /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
-		EE75C7A228B83EBB00D83FBE /* StopLightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLightModel.swift; sourceTree = "<group>"; };
 		EE75C7A428B85B9300D83FBE /* StopLightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopLightViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				EE75C79928B8319800D83FBE /* StopLightColor.swift */,
-				EE75C7A228B83EBB00D83FBE /* StopLightModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,7 +179,6 @@
 				EE75C79A28B8319800D83FBE /* StopLightColor.swift in Sources */,
 				EE75C7A128B839BD00D83FBE /* LogView.swift in Sources */,
 				EE75C78D28B82D5D00D83FBE /* ContentView.swift in Sources */,
-				EE75C7A328B83EBB00D83FBE /* StopLightModel.swift in Sources */,
 				EE75C78B28B82D5D00D83FBE /* StopLightApp.swift in Sources */,
 				EE75C7A528B85B9300D83FBE /* StopLightViewModel.swift in Sources */,
 				EE75C79D28B832D400D83FBE /* StopLightView.swift in Sources */,

@@ -20,4 +20,21 @@ enum StopLightColor {
         case .red: return 4
         }
     }
+    
+    // The duration of a stoplight cycle in seconds.
+    static var cycleDuration: Int {
+        return green.duration + yellow.duration + red.duration
+    }
+    
+    static func getColor(from secondCount: Int) -> Self? {
+        if secondCount == 0 {
+            return .green
+        } else if secondCount == green.duration {
+            return .yellow
+        } else if secondCount == green.duration + yellow.duration {
+            return .red
+        } else {
+            return nil
+        }
+    }
 }
