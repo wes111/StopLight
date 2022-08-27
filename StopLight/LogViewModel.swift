@@ -11,11 +11,22 @@ import Foundation
 class LogViewModel: TimerViewModel {
     
     @Published var records: [StopLightRecord] = []
+    var dbManager = DatabaseManager()
     
     override init(_ timer: SecondTimer) {
         super.init(timer)
         sinkSeconds()
         sinkResets()
+    }
+    
+    // We update the records held by the dbManager each
+    // time a new record is received.
+    private func sinkRecords() {
+        $records.sink { _ in
+            guard let record = self.records.last else { return }
+            self.dbManager.appendRecord(using: record)
+            self.dbManager.saveRecords()
+        }.store(in: &subscriptions)
     }
     
     // Sink timer resets and append those resets to

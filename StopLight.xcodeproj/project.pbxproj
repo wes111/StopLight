@@ -22,6 +22,8 @@
 		EE75C7AE28B96C8700D83FBE /* SecondTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7AD28B96C8700D83FBE /* SecondTimer.swift */; };
 		EE75C7B028B972D900D83FBE /* LogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7AF28B972D900D83FBE /* LogViewModel.swift */; };
 		EE75C7B228B97A3100D83FBE /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7B128B97A3100D83FBE /* TimerViewModel.swift */; };
+		EE75C7B928BA5E3C00D83FBE /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7B828BA5E3B00D83FBE /* DatabaseManager.swift */; };
+		EE75C7BB28BA5E7000D83FBE /* CodableStopLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75C7BA28BA5E7000D83FBE /* CodableStopLight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		EE75C7AD28B96C8700D83FBE /* SecondTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTimer.swift; sourceTree = "<group>"; };
 		EE75C7AF28B972D900D83FBE /* LogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewModel.swift; sourceTree = "<group>"; };
 		EE75C7B128B97A3100D83FBE /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		EE75C7B828BA5E3B00D83FBE /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		EE75C7BA28BA5E7000D83FBE /* CodableStopLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableStopLight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		EE75C79828B8317700D83FBE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EE75C7B828BA5E3B00D83FBE /* DatabaseManager.swift */,
+				EE75C7BA28BA5E7000D83FBE /* CodableStopLight.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,6 +247,8 @@
 				EE75C7B228B97A3100D83FBE /* TimerViewModel.swift in Sources */,
 				EE75C78D28B82D5D00D83FBE /* ContentView.swift in Sources */,
 				EE75C78B28B82D5D00D83FBE /* StopLightApp.swift in Sources */,
+				EE75C7BB28BA5E7000D83FBE /* CodableStopLight.swift in Sources */,
+				EE75C7B928BA5E3C00D83FBE /* DatabaseManager.swift in Sources */,
 				EE75C7A528B85B9300D83FBE /* StopLightViewModel.swift in Sources */,
 				EE75C7A828B9115300D83FBE /* RecordView.swift in Sources */,
 				EE75C7B028B972D900D83FBE /* LogViewModel.swift in Sources */,
