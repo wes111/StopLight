@@ -19,22 +19,13 @@ class LogViewModel: TimerViewModel {
         sinkResets()
     }
     
-    // We update the records held by the dbManager each
-    // time a new record is received.
-    private func sinkRecords() {
-        $records.sink { _ in
-            guard let record = self.records.last else { return }
-            self.dbManager.appendRecord(using: record)
-            self.dbManager.saveRecords()
-        }.store(in: &subscriptions)
-    }
-    
     // Sink timer resets and append those resets to
     // records.
     private func sinkResets() {
         timer.getResetPublisher().sink { record in
             self.secondCount = 0
             self.records.append(record)
+            self.dbManager.append(record)
         }.store(in: &subscriptions)
     }
 
@@ -45,7 +36,9 @@ class LogViewModel: TimerViewModel {
             self.secondCount += 1
             print(self.secondCount)
             if let color = StopLightColor.getColor(from: self.secondCount) {
-                self.records.append(StopLightRecord(.changed(color)))
+                let record = StopLightRecord(.changed(color))
+                self.records.append(record)
+                self.dbManager.append(record)
                 print("Current second: \(self.secondCount), color: \(color)")
             }
         }.store(in: &subscriptions)

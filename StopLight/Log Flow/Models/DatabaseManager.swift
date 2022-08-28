@@ -18,7 +18,7 @@ struct DatabaseManager {
     }
     
     // Append a new record to currentRecords.
-    mutating func appendRecord(using record: StopLightRecord) {
+    mutating func append(_ record: StopLightRecord) {
         self.currentRecords.append(CodableStopLight(record: record))
     }
     

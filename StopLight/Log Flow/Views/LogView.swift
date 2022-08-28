@@ -26,13 +26,23 @@ struct LogView: View {
             .pickerStyle(.segmented)
             
             if selectedTab == .current {
-                ScrollView {
-                    ForEach(vm.records) { record in
-                        RecordView(record: record)
+                VStack {
+                    ScrollView {
+                        ForEach(vm.records) { record in
+                            RecordView(record: record)
+                        }
+                        .padding(10)
                     }
-                    .padding(10)
+                    
+                    Button {
+                        vm.dbManager.saveRecords()
+                        print("Saved")
+                    } label: {
+                        Text("Save")
+                    }
                 }
                 .padding(30)
+                
             } else {
                 ScrollView {
                     ForEach(vm.dbManager.fetchRecords()) { record in
