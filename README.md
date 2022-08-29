@@ -34,7 +34,7 @@ is displayed to the user in the log -> preview tab. Note: the previously saved d
 on app launch.
 
 2.  **Initial stoplight state**: The stoplight begins in the "green" state. Since this state is neither
-a restart or light change, the state is not recorded in the stoplight's history. Accordingly, all 
+a restart nor light change, the state is not recorded in the stoplight's history. Accordingly, all 
 stoplight histories will begin with either a restart or a "Light Change - Yellow."
 
 ## Future Improvements:
@@ -47,7 +47,7 @@ logic is contained within a single class, future history storage refactors shoul
 updates outside of this class. A Core Data solution would also make it easier to store multiple
 stoplight histories, should this become a requirement in the future.
 
-2.  **Date Formatting**: The date-time stamps in the app do not match the formatting specified in the
+2.  **Date Formatting**: The date-time stamps in the app do not match the format specified in the
 requirements. A date formatter should be added to the app so that the dates displayed to the user are 
 in the correct format.
 
