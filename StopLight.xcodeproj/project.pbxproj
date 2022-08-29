@@ -77,13 +77,13 @@
 		EE75C78928B82D5D00D83FBE /* StopLight */ = {
 			isa = PBXGroup;
 			children = (
-				EE75C79E28B8396A00D83FBE /* MainTabView.swift */,
-				EE75C7AD28B96C8700D83FBE /* SecondTimer.swift */,
-				EE75C7B128B97A3100D83FBE /* TimerViewModel.swift */,
-				EE75C7B328B97B7800D83FBE /* StopLight Flow */,
-				EE75C7B728B97BEF00D83FBE /* Log Flow */,
 				EE75C78A28B82D5D00D83FBE /* StopLightApp.swift */,
 				EE75C78C28B82D5D00D83FBE /* ContentView.swift */,
+				EEC5713328BC63A2001D1781 /* Model */,
+				EEC5713528BC64F7001D1781 /* Views */,
+				EEC5713428BC63B7001D1781 /* View Model */,
+				EE75C7B328B97B7800D83FBE /* StopLight Flow */,
+				EE75C7B728B97BEF00D83FBE /* Log Flow */,
 				EE75C78E28B82D6200D83FBE /* Assets.xcassets */,
 				EE75C79028B82D6200D83FBE /* Preview Content */,
 			);
@@ -169,6 +169,30 @@
 				EE75C7A628B85BA100D83FBE /* View Model */,
 			);
 			path = "Log Flow";
+			sourceTree = "<group>";
+		};
+		EEC5713328BC63A2001D1781 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE75C7AD28B96C8700D83FBE /* SecondTimer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEC5713428BC63B7001D1781 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE75C7B128B97A3100D83FBE /* TimerViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		EEC5713528BC64F7001D1781 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE75C79E28B8396A00D83FBE /* MainTabView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
