@@ -39,22 +39,21 @@ stoplight histories will begin with either a restart or a "Light Change - Yellow
 
 ## Future Improvements:
 
-1.  **Persisting favorite events**: Currently the app uses UserDefaults to persist favorite events and
-does not scale well. A user who favorites hundreds or thousands of events will eventually run into 
-issues with this implementation. Users are also unable to un-favorite events that do not appear in
-their search results. Because of this, a users persisted favorited events can grow silently (e.g. events
-that are in the past but that were not un-favorited will remain in the UserDefaults).
-2.  **View reusability**: Some views should be refactored to be more reusable should the scope of the
-project expand. For example, the struct ToggleFavoriteView could be more easily reused if its current
-dependency on the EventsViewModel was removed. One way to remove this dependency would be to
-initialize the ToggleFavoriteView with a new closure that would be called on the tap gesture.
-3.  **Requesting events**: The app does not attempt to limit the number of network requests that are 
-made in quick succession. Refactoring the app to use Combine's 'switchToLatest' operator would
-help eliminate stale requests.
-4.  **Query text**: The user text is currently unmodified before being used in the api call. This should 
-be changed to improve search functionality for the user. For example, currently when a user types a 
-query with a space, the api returns an empty result because spaces are not supported. The query should
-be modified in the app to replace or remove spaces before being sent to the api.
+1.  **Persisting stoplight histories**: Currently, the app uses UserDefaults to persist a stoplight's 
+history. Since stoplight histories are usually not small, and can grow to hundreds, thousands, or more
+records, this is not an ideal solution for a production app. Core Data is one alternative that could
+replace the current database implementation as the requirements are expanded. Since the app's database 
+logic is contained within a single class, future history storage refactors should require few, if any,
+updates outside of this class. A Core Data solution would also make it easier to store multiple
+stoplight histories, should this become a requirement in the future.
+
+2.  **Date Formatting**: The date-time stamps in the app do not match the formatting specified in the
+requirements. A date formatter should be added to the app so that the dates displayed to the user are 
+in the correct format.
+
+3.  **View Improvements**: Some view code is redundant and should be refactored. Additionally, the 
+app currently lacks any significant color or design. The views should have designs and styling added 
+to make for a more enjoyable user experience
 
 
 ## App Screenshots:
