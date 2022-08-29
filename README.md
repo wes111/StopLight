@@ -57,3 +57,4 @@ to make for a more enjoyable user experience
 
 
 ## App Screenshots:
+<img width="276" alt="Screen Shot 2022-08-28 at 11 41 30 PM" src="https://user-images.githubusercontent.com/60911262/187124725-d7150edc-1724-4ed5-ba7a-835ba0fb017b.png"> <img width="276" alt="Screen Shot 2022-08-28 at 11 41 39 PM" src="https://user-images.githubusercontent.com/60911262/187124726-57611aca-028a-4ac6-9312-e3d9cc8a3db9.png">
